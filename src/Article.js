@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function BlogPost() {
+function Article() {
   const { id } = useParams();
 
   // Mock data
@@ -22,4 +22,4 @@ function BlogPost() {
   );
 }
 
-export default BlogPost;
+export default Article;

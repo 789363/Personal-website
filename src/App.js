@@ -1,29 +1,25 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
-import BlogList from './BlogList';
-import BlogPost from './BlogPost';
-import './App.css'; // 引入自定義的CSS樣式
+import ArticleList from './ArticleList';
+import Article from './Article';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="app">
+      <div>
         <Navbar />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<BlogList />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/articles" element={<ArticleList />} />
+          <Route path="/articles/:id" element={<Article />} />
+        </Routes>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

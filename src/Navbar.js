@@ -1,23 +1,36 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaHome, FaUser, FaFileAlt } from 'react-icons/fa';
+import './Navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+    <nav className="navbar">
+      <div className="navbar-brand">
+        <h1>My Blog</h1>
+      </div>
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link to="/" className="nav-link">
+            <FaHome />
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/about">About</Link>
+        <li className="nav-item">
+          <Link to="/about" className="nav-link">
+            <FaUser />
+            About
+          </Link>
         </li>
-        <li>
-          <Link to="/blog">Blog</Link>
+        <li className="nav-item">
+          <Link to="/articles" className="nav-link">
+            <FaFileAlt />
+            Articles
+          </Link>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
