@@ -1,113 +1,141 @@
+/* Home.css */
+
 .home-container {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .intro-container {
-    margin-bottom: 40px;
-  }
-  
-  .intro-heading {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .highlight {
-    color: #007bff;
-  }
-  
-  .intro-typed {
-    font-size: 24px;
-  }
-  
-  .section-container {
-    margin-bottom: 40px;
-  }
-  
-  .section-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .skills-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .skills-list li {
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    padding: 10px 20px;
-  }
-  
-  .project-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .project-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .experience-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .experience-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .experience-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .experience-card ul {
-    padding-left: 20px;
-  }
-  
-  .contact-container {
-    margin-top: 40px;
-  }
-  
-  .contact-desc {
-    margin-bottom: 20px;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 24px;
-  }
-  
-  .social-links a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .social-links a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.intro-container {
+  margin-bottom: 20px;
+}
+
+.intro-heading {
+  font-size: 24px;
+}
+
+.highlight {
+  color: red;
+}
+
+.intro-typed {
+  font-size: 20px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-desc {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.skills-tree {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tree-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.skills-chart {
+  margin-right: 20px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-connector {
+  width: 10px;
+  height: 10px;
+  background-color: #8884d8;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.skill-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.skill-name {
+  font-size: 18px;
+}
+
+.section-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  flex: 0 0 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.experience-card {
+  flex: 0 0 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-container {
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  font-size: 18px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  font-size: 24px;
+  margin-right: 10px;
+}
