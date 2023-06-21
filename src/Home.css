@@ -1,23 +1,26 @@
-/* Home.css */
-
 .home-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: center;
 }
 
 .left-panel {
   flex: 1;
-  margin-right: 20px;
+  padding: 2rem;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 2rem;
 }
 
 .intro-container {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .intro-heading {
-  font-size: 24px;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .highlight {
@@ -25,117 +28,151 @@
 }
 
 .intro-typed {
-  font-size: 20px;
+  font-size: 1.5rem;
+  color: red;
 }
 
 .profile-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 .profile-desc {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 .skills-tree {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .tree-icon {
-  font-size: 24px;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 
-.skills-chart {
-  margin-right: 20px;
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .skill-connector {
   width: 10px;
   height: 10px;
-  background-color: #8884d8;
   border-radius: 50%;
-  margin-right: 10px;
+  background-color: black;
+  margin-right: 1rem;
 }
 
 .skill-icon {
-  font-size: 24px;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-right: 1rem;
 }
 
 .skill-name {
-  font-size: 18px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.section-heading {
-  font-size: 24px;
-  margin-bottom: 20px;
+.skill-desc {
+  font-size: 1.2rem;
 }
 
 .project-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .project-card {
-  flex: 0 0 48%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-date {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-role {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc,
+.project-achievements {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .experience-card {
-  flex: 0 0 48%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 1rem;
 }
 
-.contact-container {
-  margin-bottom: 20px;
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.experience-date {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-role {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-desc,
+.experience-achievements {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-desc {
-  font-size: 18px;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .social-links a {
-  font-size: 24px;
-  margin-right: 10px;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: black;
 }

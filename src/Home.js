@@ -28,9 +28,9 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="left-panel">
-        <div className="intro-container">
+        <motion.div className="intro-container" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
           <h1 className="intro-heading">
-            Hi, I'm <span className="highlight">Your Name</span>
+            Hi, I'm <span className="highlight">育葦</span>
           </h1>
           <Typist className="intro-typed" avgTypingDelay={40}>
             <span style={{ fontSize: '1.5rem', color: 'red' }}>Passionate Software Engineer</span>
@@ -39,113 +39,125 @@ const Home = () => {
             <Typist.Backspace count={13} delay={1000} />
             <span style={{ fontSize: '1.5rem', color: 'red' }}>Tech Enthusiast</span>
           </Typist>
-        </div>
+        </motion.div>
 
-        <div className="profile-container">
+        <motion.div className="profile-container" initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <img src="your-profile-image.jpg" alt="Profile" className="profile-image" />
           <p className="profile-desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus at
             turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet. Sed tincidunt mi
             mauris, nec facilisis erat eleifend eu.
           </p>
-        </div>
-        <div className="skills-tree">
-            <motion.div className="tree-icon" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <i className="fa fa-code"></i>
-            </motion.div>
-            <div className="skills-chart">
-              <BarChart width={400} height={300} data={data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="value" fill="#8884d8" />
-              </BarChart>
-            </div>
+        </motion.div>
+
+        <motion.div className="skills-tree" initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
+          <motion.div className="tree-icon" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <i className="fa fa-code"></i>
+          </motion.div>
+          <div className="skills-container">
+            <h2 className="section-heading">Skills</h2>
             <ul className="skills-list">
               {skillsData.map((skill, index) => (
-                <motion.li
-                  key={index}
-                  className="skill-item"
-                  whileHover={{ scale: 1.1, originX: 0 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
+                <li key={index} className="skill-item">
                   <div className="skill-connector"></div>
-                  <div className="skill-icon">{React.createElement(skill.icon)}</div>
-                  <h3 className="skill-name">{skill.name}</h3>
-                  {/* <p className="skill-desc">{`Advanced knowledge: ${skill.value}%`}</p> */}
-                </motion.li>
+                  <div className="skill-icon">
+                    <skill.icon />
+                  </div>
+                  <div className="skill-details">
+                    <h3 className="skill-name">{skill.name}</h3>
+                    <p className="skill-desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit.
+                    </p>
+                  </div>
+                </li>
               ))}
             </ul>
           </div>
+        </motion.div>
       </div>
 
       <div className="right-panel">
-        <div className="skills-section">
-          <h2 className="section-heading">Skills</h2>
-
-        </div>
-
-        <div className="section-container">
+        <motion.div className="section-container" initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <h2 className="section-heading">Projects</h2>
           <div className="project-container">
-            <motion.div className="project-card" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <h3>Project 1</h3>
-              <p>A web application built with React.js and Node.js for managing tasks and deadlines.</p>
-              <a href="https://example.com/project1" target="_blank" rel="noopener noreferrer">
-                View Project
-              </a>
-            </motion.div>
-            <motion.div className="project-card" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <h3>Project 2</h3>
-              <p>An e-commerce website developed using React.js, Redux, and MongoDB.</p>
-              <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer">
-                View Project
-              </a>
-            </motion.div>
+            <div className="project-card">
+              <h3 className="project-title">Project 1</h3>
+              <p className="project-date">2022 - Present</p>
+              <p className="project-role">Front-end Developer</p>
+              <p className="project-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus
+                at turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet.
+              </p>
+              <p className="project-achievements">
+                <strong>Achievements:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                vitae justo elit. Nulla eget tellus at turpis viverra rhoncus a eget turpis.
+              </p>
+            </div>
+            <div className="project-card">
+              <h3 className="project-title">Project 2</h3>
+              <p className="project-date">2020 - 2022</p>
+              <p className="project-role">Full-stack Developer</p>
+              <p className="project-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus
+                at turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet.
+              </p>
+              <p className="project-achievements">
+                <strong>Achievements:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                vitae justo elit. Nulla eget tellus at turpis viverra rhoncus a eget turpis.
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="section-container">
+        <motion.div className="section-container" initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <h2 className="section-heading">Experience</h2>
           <div className="experience-container">
-            <motion.div className="experience-card" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <h3>Software Engineer</h3>
-              <p>ABC Company | June 2018 - Present</p>
-              <ul>
-                <li>Developed and maintained web applications using React.js and Node.js.</li>
-                <li>Collaborated with cross-functional teams to deliver high-quality software solutions.</li>
-                <li>Participated in code reviews and provided constructive feedback to team members.</li>
-              </ul>
-            </motion.div>
-
-            <motion.div className="experience-card" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <h3>Intern</h3>
-              <p>XYZ Inc. | January 2017 - May 2017</p>
-              <ul>
-                <li>Assisted in developing frontend components for a customer management system.</li>
-                <li>Conducted unit testing and resolved bugs to improve application performance.</li>
-              </ul>
-            </motion.div>
+            <div className="experience-card">
+              <h3 className="experience-title">Experience 1</h3>
+              <p className="experience-date">2018 - 2020</p>
+              <p className="experience-role">Software Engineer</p>
+              <p className="experience-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus
+                at turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet.
+              </p>
+              <p className="experience-achievements">
+                <strong>Achievements:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                vitae justo elit. Nulla eget tellus at turpis viverra rhoncus a eget turpis.
+              </p>
+            </div>
+            <div className="experience-card">
+              <h3 className="experience-title">Experience 2</h3>
+              <p className="experience-date">2016 - 2018</p>
+              <p className="experience-role">Web Developer</p>
+              <p className="experience-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus
+                at turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet.
+              </p>
+              <p className="experience-achievements">
+                <strong>Achievements:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                vitae justo elit. Nulla eget tellus at turpis viverra rhoncus a eget turpis.
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="contact-container">
-          <h2 className="section-heading">Contact Me</h2>
-          <p className="contact-desc">Feel free to reach out to me. Let's connect!</p>
-          <div className="social-links">
-            <a href="mailto:john.doe@example.com" target="_blank" rel="noopener noreferrer">
-              <FaEnvelope />
-            </a>
-            <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
-            </a>
+        <motion.div className="section-container" initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
+          <h2 className="section-heading">Contact</h2>
+          <div className="contact-container">
+            <p className="contact-desc">Feel free to contact me:</p>
+            <div className="social-links">
+              <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href="mailto:youremail@example.com">
+                <FaEnvelope />
+              </a>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
