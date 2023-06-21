@@ -33,20 +33,20 @@ const Home = () => {
             Hi, I'm <span className="highlight">育葦</span>
           </h1>
           <Typist className="intro-typed" avgTypingDelay={40}>
-            <span style={{ fontSize: '1.5rem', color: 'red' }}>Passionate Software Engineer</span>
-            <Typist.Backspace count={27} delay={1000} />
-            <span style={{ fontSize: '1.5rem', color: 'red' }}>Web Developer</span>
-            <Typist.Backspace count={13} delay={1000} />
-            <span style={{ fontSize: '1.5rem', color: 'red' }}>Tech Enthusiast</span>
+            <span style={{ fontSize: '2rem', color: 'red' }}>專精JavaScript、Python、PHP、Java、Rust、Go、C++</span>
+            <Typist.Backspace count={35} delay={1000} />
+            <span style={{ fontSize: '2rem', color: 'red' }}>熟悉Linux、Docker、Azure、Aws、Mysql、Mongose</span>
+            <Typist.Backspace count={40} delay={1000} />
+            <span style={{ fontSize: '2rem', color: 'red' }}>您能信任的後端及AI工程師</span>
           </Typist>
         </motion.div>
 
-        <motion.div className="profile-container" initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
-          <img src="your-profile-image.jpg" alt="Profile" className="profile-image" />
+       <motion.div className="intro-container" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+
           <p className="profile-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae justo elit. Nulla eget tellus at
-            turpis viverra rhoncus a eget turpis. Donec rutrum justo non purus vulputate aliquet. Sed tincidunt mi
-            mauris, nec facilisis erat eleifend eu.
+            現在就讀國立高雄科技大學智慧商務系，非常喜歡後端開發、深度學習、IOT相關等程式撰寫<br/>
+            有多個前端、後端、資料分析、物聯網、區塊鏈智能合約專案<br/>
+            並且熟悉Linux環境，雲端機器部屬、Docker、Github版本控管，能適應各類工作與環境
           </p>
         </motion.div>
 

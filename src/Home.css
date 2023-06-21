@@ -24,17 +24,17 @@
 }
 
 .highlight {
-  color: red;
+  color: rgb(43, 45, 155);
 }
 
 .intro-typed {
   font-size: 1.5rem;
-  color: red;
+  color: rgb(26, 69, 110);
 }
 
 .profile-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-bottom: 2rem;
 }
 
@@ -46,6 +46,7 @@
 }
 
 .profile-desc {
+  
   font-size: 1.2rem;
 }
 

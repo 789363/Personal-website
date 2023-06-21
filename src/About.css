@@ -1,17 +1,75 @@
 /* About.css */
+
 .about {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .about p {
-    line-height: 1.5;
-  }
-  
+  /* Add your desired styles for the about container */
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:30%;
+}
+
+.profile-image {
+  /* Add styles for the profile image container */
+}
+
+.profile-image img {
+  /* Add styles for the profile image */
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+margin-top: 300px;
+margin-left:70%;
+}
+
+.profile-details {
+  /* Add styles for the profile details container */
+}
+
+.profile-details h1 {
+  /* Add styles for the heading */
+}
+
+.profile-details p {
+  /* Add styles for the paragraph */
+}
+
+.profile-details h2 {
+  /* Add styles for the subheadings */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #ebebeb;
+}
+.profile-card {
+  /* Add styles for the profile card */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add any additional styles or adjustments as needed */
