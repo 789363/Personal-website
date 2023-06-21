@@ -8,6 +8,7 @@ const ArticleList = () => {
       description: '基於Iota協議的區塊鏈論壇，並使用Rust作為後端框架，希望帶給大家真實的評論環境',
       technologies: ['Rust', 'Node.js', 'Solidity'],
       githubLink: 'https://github.com/Kiwi-Go/digital-record-backend',
+      articleLink: '/articles/1',
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const ArticleList = () => {
       description: '協助Fuji按摩椅設計問卷系統，讓員工可以回報購買心得以便做統合',
       technologies: ['Mysql', 'Express.js', 'Docker'],
       githubLink: 'https://github.com/789363/ifuji-form-api',
+      articleLink: '/articles/2',
     },
     {
       id: 3,
@@ -43,6 +45,7 @@ const ArticleList = () => {
       description: '協助國防部建立艦艇相關零件資料庫系統',
       technologies: ['MySQL', 'React', 'Express.js'],
       githubLink: 'https://agry88.github.io/naval_ships-new/',
+      articleLink: '',
     },
   ];
 
@@ -56,6 +59,9 @@ const ArticleList = () => {
           <p>使用技術：{project.technologies.join(', ')}</p>
           <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
             Github上查看專案
+          </a>
+          <a href={project.articleLink} target="_blank" rel="noopener noreferrer">
+            專案介紹
           </a>
         </div>
       ))}

@@ -4,8 +4,8 @@ import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
 import ArticleList from './ArticleList';
-import Article from './Article';
 
+import FujiPage  from './ArticalPage/FujiPage';
 const App = () => {
   return (
     <Router>
@@ -15,7 +15,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/articles" element={<ArticleList />} />
-          <Route path="/articles/:id" element={<Article />} />
+          <Route path="/articles/1" element={<FujiPage />} />
+          <Route path="/articles/2" element={<FujiPage />} />
         </Routes>
       </div>
     </Router>

@@ -3,17 +3,22 @@ import './Home.css';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import Typist from 'react-typist';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 
-
+import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaDatabase, FaPython } from 'react-icons/fa';
+import { SiCplusplus, SiRust,SiDocker} from 'react-icons/si';
 
 const skillsData = [
-  { name: 'HTML5', icon: FaHtml5 },
+  { name: 'HTML5', icon: FaHtml5  },
   { name: 'CSS3', icon: FaCss3 },
-  { name: 'React', icon: FaReact },
+  { name: 'React', icon: FaReact  },
   { name: 'Node.js', icon: FaNodeJs },
-  { name: 'Database', icon: FaDatabase },
+  { name: 'Python', icon: FaPython },
+  { name: 'C++', icon: SiCplusplus },
+  { name: 'Rust', icon: SiRust  },
+  { name: 'Docker', icon: SiDocker },
+  { name: 'MySQL', icon: FaDatabase },
 ];
+
 
 const Home = () => {
   return (
